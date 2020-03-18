@@ -9,7 +9,7 @@ router.use((req, res, next) => {
         return;
     }
 
-    res.redirect('/login');
+    res.redirect('/auth/login');
 });
 
 router.get('/dashboard', (req, res, next) => {
@@ -80,7 +80,7 @@ router.post("/launderers", (req, res, next) => {
             return;
         }
         req.session.currentUser = theUser;
-        res.redirect("/dashboard")
+        res.redirect("/laundry/dashboard")
     })
 })
 
@@ -100,7 +100,7 @@ router.post('/laundry-pickups', (req, res, next) => {
             return;
         }
 
-        res.redirect('/dashboard');
+        res.redirect('/laundry/dashboard');
     });
 });
 

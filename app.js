@@ -81,8 +81,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/', index);
-app.use('/', authRoutes);
-app.use('/', laundryRoutes);
+app.use('/auth', authRoutes);
+app.use('/laundry', laundryRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
